@@ -7,6 +7,8 @@
 ├── dsp.cpp
 ├── dsp.exe
 ├── plot_results.py
+├── plots
+├── requirements.txt
 └── .gitignore
 ```
 
@@ -46,19 +48,19 @@
 
 - `plot_interpolation_abs_error_vs_frequency` - построение графика абсолютной ошибки интерполяции в форматах плавающей и фиксированной точках в зависимости от частоты;
 
-![](abs_error_vs_freq.png)
+![](plots/abs_error_vs_freq.png)
 
 - `plot_signal_and_quantization_samples` - визуализация исходного и квантованного сигнала;
 
-![](signal_and_quantization.png)
+![](plots/signal_and_quantization.png)
 
 - `plot_ideal_and_interpolation_signal` - сравнение интерполированного и идеального сигналов;
 
-![](ideal_and_interpolation_signal.png)
+![](plots/ideal_and_interpolation_signal.png)
 
 - `plot_filter` - визуализация импульсной характеристики КИХ-фильтра низких частот с окном и без окна Хэмминга. ИХ оконного фильтра нормируется и масштабируется.
 
-![](filter.png)
+![](plots/filter.png)
 
 ### `requirements.txt`
 

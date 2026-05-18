@@ -34,7 +34,7 @@ def plot_interpolation_abs_error_vs_frequency():
     ax.legend(loc='upper left', fontsize=15)
     ax.grid()
 
-    fig.savefig("abs_error_vs_freq.png")
+    fig.savefig("plots/abs_error_vs_freq.png")
 
 
 def plot_signal_and_quantization_samples():
@@ -67,7 +67,7 @@ def plot_signal_and_quantization_samples():
     ax.legend(loc='upper left', fontsize=15)
     ax.grid()
 
-    fig.savefig("signal_and_quantization.png")
+    fig.savefig("plots/signal_and_quantization.png")
 
 def plot_ideal_and_interpolation_signal():
     fig = plt.figure(figsize=(16, 20))
@@ -132,7 +132,7 @@ def plot_ideal_and_interpolation_signal():
     ax2.legend(loc='upper left', fontsize=15)
     ax2.grid()
 
-    fig.savefig("ideal_and_interpolation_signal.png")
+    fig.savefig("plots/ideal_and_interpolation_signal.png")
 
 def plot_filter():
     fig = plt.figure(figsize=(16, 10))
@@ -159,7 +159,7 @@ def plot_filter():
     ax.legend(loc='upper left', fontsize=15)
     ax.grid()
 
-    fig.savefig("filter.png")
+    fig.savefig("plots/filter.png")
 
 
 if __name__ == "__main__":

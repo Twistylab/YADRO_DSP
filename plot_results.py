@@ -31,7 +31,7 @@ def plot_interpolation_abs_error_vs_frequency():
     ax.set_title("Absolute error of floating and fixed point interpolation", fontsize=20)
     ax.set_xlabel("frequency, Hz", fontsize=18)
     ax.set_ylabel("absolute error", fontsize=18)
-    ax.legend(fontsize=15)
+    ax.legend(loc='upper left', fontsize=15)
     ax.grid()
 
     fig.savefig("abs_error_vs_freq.png")
@@ -64,7 +64,7 @@ def plot_signal_and_quantization_samples():
     ax.set_title(f"signal and quantization samples (mse = {mse})", fontsize=20)
     ax.set_xlabel("time, s", fontsize=18)
     ax.set_ylabel("samples", fontsize=18)
-    ax.legend(fontsize=15)
+    ax.legend(loc='upper left', fontsize=15)
     ax.grid()
 
     fig.savefig("signal_and_quantization.png")
@@ -117,7 +117,7 @@ def plot_ideal_and_interpolation_signal():
     ax.set_title(f"ideal and floating point interpolation signal samples\n mean absolute error interpolation {round(sum(df_error["floating_point_interpolation_abs_error"]) / len(df_error["floating_point_interpolation_abs_error"]) * 1e3, 2)}" + r"$\cdot 10^{-3}$", fontsize=20)
     ax.set_xlabel("time, s", fontsize=18)
     ax.set_ylabel("samples", fontsize=18)
-    ax.legend(fontsize=15)
+    ax.legend(loc='upper left', fontsize=15)
     ax.grid()
 
     ax2 = fig.add_subplot(212)
@@ -129,7 +129,7 @@ def plot_ideal_and_interpolation_signal():
     ax2.set_title(f"ideal and fixed point interpolation signal samples\n mean absolute error interpolation {round(sum(df_error["fixed_point_interpolation_abs_error"]) / len(df_error["fixed_point_interpolation_abs_error"]) * 1e3, 2)}" + r"$\cdot 10^{-3}$", fontsize=20)
     ax2.set_xlabel("time, s", fontsize=18)
     ax2.set_ylabel("samples", fontsize=18)
-    ax2.legend(fontsize=15)
+    ax2.legend(loc='upper left', fontsize=15)
     ax2.grid()
 
     fig.savefig("ideal_and_interpolation_signal.png")
@@ -156,7 +156,7 @@ def plot_filter():
     ax.set_title(f"filter samples", fontsize=20)
     ax.set_xlabel("samples", fontsize=18)
     ax.set_ylabel("filter samples", fontsize=18)
-    ax.legend(fontsize=15)
+    ax.legend(loc='upper left', fontsize=15)
     ax.grid()
 
     fig.savefig("filter.png")

@@ -15,7 +15,7 @@ private:
 	double max_quant_value;
 	const int min_freq;
 	const int max_freq;
-	const int sampling_freq;
+	const double sampling_freq;
 	const double duration;
 	const int quantization_grid;
 	const int interpolation_size;
@@ -23,13 +23,13 @@ private:
 	const double pi = 3.14159265358979323846;
 
 	vector<double> generate_sin(const int rate) {
-		int rate_sampling_freq = rate * sampling_freq;
+		double rate_sampling_freq = rate * sampling_freq;
 		int sampling_number = duration * rate_sampling_freq;
 
 		vector<double> sampling_signal(sampling_number);
 
 		for (int sample = 0; sample < sampling_number; sample++) {
-			sampling_signal[sample] = sin(2 * pi * sample / (double)rate_sampling_freq * (min_freq + (max_freq - min_freq) * sample / (2 * (double)sampling_number)));
+			sampling_signal[sample] = sin(2 * pi * sample / rate_sampling_freq * (min_freq + (max_freq - min_freq) * sample / (2 * (double)sampling_number)));
 		}
 
 		return sampling_signal;
@@ -207,7 +207,7 @@ public:
 	vector<double> floating_point_interpolation_abs_error_vs_freq;
 	vector<double> fixed_point_interpolation_abs_error_vs_freq;
 
-	DSPEngine(int f_min, int f_max, int f_s, double dur, int quant_grid, int inter_size, int filter_len) :
+	DSPEngine(int f_min, int f_max, double f_s, double dur, int quant_grid, int inter_size, int filter_len) :
 		min_freq(f_min)
 		, max_freq(f_max)
 		, sampling_freq(f_s)
@@ -277,7 +277,8 @@ public:
 
 
 int main() {
-	const int min_freq = 0, max_freq = 50, sampling_freq = 100;
+	const int min_freq = 0, max_freq = 50;
+	const double sampling_freq = 100;
 	const double duration = 1.0;
 	const int quantization_grid = 16;
 	const int interpolation_size = 2;

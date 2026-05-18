@@ -278,7 +278,7 @@ public:
 
 int main() {
 	const int min_freq = 0, max_freq = 50, sampling_freq = 100;
-	double duration = 1.0;
+	const double duration = 1.0;
 	const int quantization_grid = 16;
 	const int interpolation_size = 2;
 	const int filter_length = 31;

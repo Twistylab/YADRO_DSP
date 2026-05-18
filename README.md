@@ -29,7 +29,7 @@
 
 - `generate_sin` — генерация синусоидального сигнала;
 - `quantization` — квантование синуса;
-- `floating_point_interpolation` — интерполяция входного воздействия в формате плавающей точки;
+- `floating_point_interpolation` — интерполяция в формате плавающей точки;
 - `fixed_point_interpolation` — интерполяция в формате фиксированной точки;
 - `interpolation_abs_error_vs_freq` — расчёт абсолютной ошибки интерполяции в зависимости от частоты сигнала;
 - `quantization_mse` — расчёт MSE квантования.
